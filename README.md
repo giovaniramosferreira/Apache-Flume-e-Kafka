@@ -6,7 +6,11 @@ Este relatório descreve o processo de configuração e teste de um sistema util
 
 ## Hardware e aplicativos utilizados
 
-Vamos utilizar uma Maquina virtual no Virtualbox configurada
+Vamos utilizar uma Maquina virtual no Virtualbox configurada com o Apache Flume e Kafka.
+A maquina
+
+![Descrição da imagem](./assets/image.png)
+
                             
 ## Requisitos do Projeto 
 
@@ -18,6 +22,9 @@ Objetivos
 5.	Validar a ingestão e consumo de dados entre Flume e Kafka.
 4 - Procedimentos e Resultados
  
+
+## Procedimentos e resultados
+
 Executando o comando para subir o servidor
 sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-server-start.sh /home/puc/kafka_2.11-1.0.0/config/server.properties
 
