@@ -24,12 +24,21 @@ Objetivos
 
 ## Procedimentos e resultados
 
-Configurando o servidor Kafka
-Executando o comando para subir o servidor
+### Configurando o servidor
+Para configurar nosso servidor, vamos utilizar o seguinte comando no terminal:
 
 ```
 sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-server-start.sh /home/puc/kafka_2.11-1.0.0/config/server.properties
 ```
+![Maquina virtual](./assets/subindo_servidor.png)
 
+Obs.: É necessário manter esse terminal aberto durante a utilização do servidor.
 
-Imagem
+### Criando o primeiro tópico
+Para criar nosso topico, vamos abrir um novo terminal e executar o seguinte comando:
+
+```
+sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic aula1006
+```
+
+![Maquina virtual](./assets/subindo_topico.png)
