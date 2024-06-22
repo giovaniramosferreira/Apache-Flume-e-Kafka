@@ -25,7 +25,7 @@ Objetivos
 4.	Configurar e executar agentes do Flume para integrar com Kafka.
 5.	Validar a ingestão e consumo de dados entre Flume e Kafka.
 
-## 4 - Procedimentos e resultados
+## 📝4 - Procedimentos e resultados
 
 ### Configurando o servidor
 Para configurar nosso servidor, vamos utilizar o seguinte comando no terminal:
