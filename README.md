@@ -94,3 +94,24 @@ feito isso, mova os arquivos para a pasta de teste e observe o resultado
 
 
 ### Spool-to-kafka
+
+Agora vamos testar o script spool-to-kafka. as seguintes configurações estão presentes:
+
+![...](./assets/spool_kafka_properties.png)
+
+Vamos criar o topico flume-topic para receber os dados dos arquivos que vamos movimentar para a pasta
+
+Para iniciar o agente
+```
+flume-ng agent --conf-file spool-to-kafka.properties --name agent2 -Dflume.root.logger=WARN,console
+```
+
+Para iniciar o Consumer do topico kafka
+
+```
+sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic flume-topic
+```
+
+note que quando movemos o arquivo para a pasta que está sendo monitorada, o conteudo do arquivo é listado no consumer
+
+![...](./assets/spool_kafka_leitura_arquivos.png)
