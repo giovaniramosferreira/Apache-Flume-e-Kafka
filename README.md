@@ -1,13 +1,13 @@
 ![introdução](./assets/Intro.png)
 
 
-# Apache-Flume-e-Kafka
+# Apache Flume e Kafka
 
-## 🚀 Introdução 
+## 🚀 1 - Introdução 
 
 Este relatório descreve o processo de configuração e teste de um sistema utilizando Apache Kafka e Apache Flume em um ambiente de máquina virtual. O objetivo principal é criar tópicos no Kafka, produzir e consumir mensagens, e utilizar agentes do Flume para ingerir dados de um diretório de spool para um tópico do Kafka.
 
-## ⚙️ Hardware e aplicativos utilizados
+## ⚙️ 2 - Hardware e aplicativos utilizados
 
 Vamos utilizar uma Maquina virtual no Virtualbox configurada com o Apache Flume e Kafka.
 A maquina virtual tem as seguintes configurações.
@@ -16,7 +16,7 @@ A maquina virtual tem as seguintes configurações.
 
 ![Maquina virtual](./assets/image_2.png)
                             
-## 📖 Requisitos do Projeto 
+## 📖 3 - Requisitos do Projeto 
 
 Objetivos
 1.	Configurar e iniciar um servidor Kafka.
@@ -25,7 +25,7 @@ Objetivos
 4.	Configurar e executar agentes do Flume para integrar com Kafka.
 5.	Validar a ingestão e consumo de dados entre Flume e Kafka.
 
-## Procedimentos e resultados
+## 4 - Procedimentos e resultados
 
 ### Configurando o servidor
 Para configurar nosso servidor, vamos utilizar o seguinte comando no terminal:
@@ -120,7 +120,7 @@ note que quando movemos o arquivo para a pasta que está sendo monitorada, o con
 ![...](./assets/spool_kafka_leitura_arquivos.png)
 
 
-## 📋Conclusão
+## 📋5 - Conclusão
 
 A integração entre Apache Kafka e Apache Flume mostrou-se uma solução robusta e eficiente para ingestão e processamento de dados em tempo real. Durante este projeto, configuramos e testamos um ambiente virtualizado onde ambos os sistemas operaram em harmonia, demonstrando a capacidade de coletar, transportar e consumir dados de maneira fluida e contínua.
 
