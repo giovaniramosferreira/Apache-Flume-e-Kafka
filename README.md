@@ -1,3 +1,6 @@
+![introdução](./assets/Intro.png.png)
+
+
 # Apache-Flume-e-Kafka
 
 ## 🚀 Introdução 
@@ -78,7 +81,7 @@ Após isso, enviamos mensagens do Producer para o Consumer, como na imagem abaix
 Para demonstrar o Flume, vamos criar 10 arquivos de texto aleatorios.
 
 
-para configurar nosso script com o spolldir, vamos alterar o arquivo.properties da seguinte forma
+Para configurar nosso script com o spooldir, vamos alterar o arquivo.properties da seguinte forma
 
 ![...](./assets/spool_to_logger_propoerties.png)
 
@@ -115,3 +118,16 @@ sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-console-consumer.sh --zookeeper localh
 note que quando movemos o arquivo para a pasta que está sendo monitorada, o conteudo do arquivo é listado no consumer
 
 ![...](./assets/spool_kafka_leitura_arquivos.png)
+
+
+## 📋Conclusão
+
+A integração entre Apache Kafka e Apache Flume mostrou-se uma solução robusta e eficiente para ingestão e processamento de dados em tempo real. Durante este projeto, configuramos e testamos um ambiente virtualizado onde ambos os sistemas operaram em harmonia, demonstrando a capacidade de coletar, transportar e consumir dados de maneira fluida e contínua.
+
+Configuramos um servidor Kafka e criamos tópicos, permitindo a produção e o consumo de mensagens através de scripts dedicados. O processo envolveu a utilização de comandos específicos para iniciar o servidor, criar tópicos e verificar tópicos existentes, assegurando a integridade e a disponibilidade dos dados.
+
+Além disso, exploramos as capacidades do Apache Flume para ingerir dados de um diretório de spool diretamente para um tópico do Kafka. A configuração e execução dos agentes do Flume permitiram que dados fossem automaticamente ingeridos e consumidos, demonstrando a eficiência do pipeline de dados configurado.
+
+Os testes realizados, tanto com mensagens simples quanto com arquivos de texto, confirmaram a eficácia das configurações implementadas. A integração Spool-to-Logger e Spool-to-Kafka mostrou que o sistema pode facilmente adaptar-se a diferentes fontes de dados e destinos, aumentando sua versatilidade em ambientes de produção.
+
+Em resumo, este projeto destacou a sinergia entre Kafka e Flume, proporcionando uma compreensão aprofundada de suas configurações e capacidades. As práticas e técnicas aprendidas aqui são essenciais para qualquer profissional que deseje implementar soluções de ingestão de dados escaláveis e resilientes em um ambiente de big data.
