@@ -30,7 +30,7 @@ Para configurar nosso servidor, vamos utilizar o seguinte comando no terminal:
 ```
 sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-server-start.sh /home/puc/kafka_2.11-1.0.0/config/server.properties
 ```
-![Maquina virtual](./assets/subindo_servidor.png)
+![...](./assets/subindo_servidor.png)
 
 Obs.: É necessário manter esse terminal aberto durante a utilização do servidor.
 
@@ -41,4 +41,56 @@ Para criar nosso topico, vamos abrir um novo terminal e executar o seguinte coma
 sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic aula1006
 ```
 
-![Maquina virtual](./assets/subindo_topico.png)
+![...](./assets/subindo_topico.png)
+
+### Verificando topicos existentes
+
+Para verificar os topicos existentes, vamos utilizar o comando:
+
+```
+sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-topics.sh --list --zookeeper localhost:2181
+```
+![...](./assets/verificando_topicos.png)
+
+### Enviando valores com o Producer
+
+Para enviar mensagens, precisamos executar dois comandos, um para o Producer e outro para o Consumer
+
+Producer:
+
+```
+sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic aula1006
+```
+
+Consumer:
+
+```
+sudo /home/puc/kafka_2.11-1.0.0/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic aula1006 --from-beginning 
+```
+
+Após isso, enviamos mensagens do Producer para o Consumer, como na imagem abaixo:
+
+![...](./assets/enviando_mensagens.png)
+
+
+### Spool-to-logger
+
+Para demonstrar o Flume, vamos criar 10 arquivos de texto aleatorios.
+
+
+para configurar nosso script com o spolldir, vamos alterar o arquivo.properties da seguinte forma
+
+![...](./assets/spool_to_logger_propoerties.png)
+
+Feito isso, navegue com o terminal até a pasta conf, existente no diretório do flume e abra o terminal a partir dali. no terminal execute o seguinte comando.
+
+```
+flume-ng agent --conf-file spool-to-kafka.properties --name agent1 -Dflume.root.logger=WARN,console
+```
+
+feito isso, mova os arquivos para a pasta de teste e observe o resultado
+
+![...](./assets/flume_diretorios_2.png)
+
+
+### Spool-to-kafka
