@@ -1,4 +1,4 @@
-![introdução](./assets/Intro.png.png)
+![introdução](./assets/Intro.png)
 
 
 # Apache-Flume-e-Kafka
